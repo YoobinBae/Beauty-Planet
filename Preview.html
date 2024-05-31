@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- 세번째 페이지 -->
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Preview - Beauty Planet</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet"
+        type="text/css" />
+    <link href="css/styles.css" rel="stylesheet" />
+    <style>
+        .center-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin-top: 20px;
+        }
+
+        .divider-custom {
+            width: 100%;
+            max-width: 400px;
+            display: flex;
+            align-items: center;
+        }
+
+        .divider-custom-line {
+            flex-grow: 1;
+            height: 1px;
+            background-color: #d1d1d1;
+            margin: 5px 30;
+            /* 구분선 위아래 여백 추가 */
+        }
+    </style>
+</head>
+
+<body>
+    <section class="page-section bg-highlight text-black mb-0" id="HOME">
+        <div class="container center-content">
+            <h2 class="page-section-heading text-center text-uppercase text-black">Previews</h2>
+            <div class="divider-custom divider-light">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                <div class="divider-custom-line"></div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
+<style>
+    /*카드 외부*/
+    .card-group {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        /*2열로 설정*/
+        justify-content: center;
+        /* 수평으로 가운데 정렬 */
+        align-items: center;
+        /* 수직으로 가운데 정렬 */
+        height: 80vh;
+        /* 화면 전체 높이 설정 */
+        gap: 5px;
+        /* 카드 사이의 간격 */
+        padding-left: 15px;
+    }
+
+    /*카드 내부*/
+    .card {
+        width: 400px;
+        /* 카드 가로 폭 설정 */
+        height: 250px;
+        /* 카드 높이 설정 */
+        border: 2px solid #000;
+        /* 카드 테두리 설정 */
+        padding: 20px;
+        /* 카드 내부 여백 설정 */
+        box-sizing: border-box;
+        /* 패딩과 테두리를 포함한 크기 설정 */
+        text-align: center;
+        /* 텍스트 가운데 정렬 */
+        display: flex;
+        /* Flexbox 사용하여 내부 내용 정렬 */
+        flex-direction: column;
+        /* 내부 내용 세로로 정렬 */
+        justify-content: center;
+        /* 내부 내용 수직으로 가운데 정렬 */
+        border-radius: 8px;
+    }
+
+    .card2 {
+        padding-left: 300px;
+    }
+
+    .card img {
+        max-width: 50%;
+        height: auto;
+        padding-left: 0%;
+        height: auto;
+        padding-left: 50px;
+    }
+
+    .button {
+        width: 100px;
+        /* 버튼 가로 크기 설정 */
+        height: 40px;
+        /* 버튼 세로 크기 설정 */
+        border-radius: 5px;
+        /* 버튼 모서리 둥글게 설정 */
+        justify-content: center;
+        /* 버튼 텍스트 수평 가운데 정렬 */
+        align-items: center;
+        /* 버튼 텍스트 수직 가운데 정렬 */
+        text-align: center;
+        /* 버튼 텍스트 가운데 정렬 */
+        margin: 0 auto;
+        /* 버튼을 카드 내부에서 가운데 정렬 */
+        height: 5vh;
+        /* 화면 전체 높이 설정 */
+    }
+</style>
+</head>
+
+<body>
+    <div class="card-group">
+        <div class="card2">
+            <div class="card">
+                <img src="images/가상메이크업.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Virtual Makeup</h5>
+                    <p class="card-text">가상 메이크업은 디지털 기술을 사용하여 사용자의 얼굴에 가상으로 메이크업을
+                        적용하는 기술입니다.</p>
+                    <div class="button">
+                        <button type="button" class="btn btn-light" onclick="goToVirtualMakeup()">바로가기</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/퍼스널컬러.png" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Personal Color Diagnosis</h5>
+                <p class="card-text">퍼스널 컬러는 개인의 피부 톤, 머리색, 눈동자색 등을 고려하여 어울리는 색상을
+                    찾아내는 것을 말합니다. </p>
+                <div class="button">
+                    <button type="button" class="btn btn-light" onclick="goToPersonalColorDiagnosis()">바로가기</button>
+                </div>
+            </div>
+        </div>
+        <div class="card2">
+            <div class="card">
+                <img src="images/퍼스널진단.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Color Type Explanation</h5>
+                    <p class="card-text">퍼스널 컬러 진단은 개인의 고유한 특성을 고려하여 맞춤형 스타일링을 지원하므로
+                        자신을 더욱 멋지게 표현하는 데 도움이 됩니다.</p>
+                    <div class="button">
+                        <button type="button" class="btn btn-light" onclick="goToColorTypeExplanation()">바로가기</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="images/리뷰.png" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Reviews</h5>
+                <p class="card-text">리뷰는 제품, 서비스, 장소 등에 대한 개인의 경험과 의견을 작성한 평가입니다.
+                    이는 다른 사람들이 해당 항목에 대해 정보를 얻고 더 나은 결정을 내리는 데 도움을 줍니다.</p>
+                <div class="button">
+                    <button type="button" class="btn btn-light" onclick="goToReviews()">바로가기</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function goToVirtualMakeup() {
+            window.location.href = "Virtual Makeup.html";
+        }
+        function goToPersonalColorDiagnosis() {
+            window.location.href = "Personal Color Diagnosis.html";
+        }
+        function goToColorTypeExplanation() {
+            window.location.href = "Color Type Explanation.html";
+        }
+        function goToReviews() {
+            window.location.href = "Reviews.html";
+        }
+    </script>
+
+    </section>
+
+    <!-- 하단 버튼 -->
+    <footer style="text-align: center;">
+        <ul style="display: flex; justify-content: center; list-style: none; padding: 0;">
+            <li style="margin-right: 20px;">
+                <a href="home.html"
+                    style="text-decoration: none; padding: 10px 20px; background-color: #ffb6c1; color: #fff; border-radius: 5px;">이전</a>
+            </li>
+            <li style="margin-right: 20px;">
+                <a href="index.html"
+                    style="text-decoration: none; padding: 10px 20px; background-color: #ffb6c1; color: #fff; border-radius: 5px;">목록</a>
+            </li>
+            <script>
+                // 목록을 클릭하면 드롭다운 메뉴가 토글되도록 이벤트를 추가합니다.
+                document.getElementById('dropdown-toggle').addEventListener('click', function () {
+                    var dropdownMenu = document.getElementById('dropdown-menu');
+                    dropdownMenu.classList.toggle('active');
+                });
+            </script>
+            <li>
+                <a href="Virtual Makeup.html"
+                    style="text-decoration: none; padding: 10px 20px; background-color: #ffb6c1; color: #fff; border-radius: 5px;">다음</a>
+            </li>
+        </ul>
+    </footer>
+    </div>
+    </div>

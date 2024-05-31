@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- 네번째 페이지 -->
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Virtual Makeup - Beauty Planet</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet"
+        type="text/css" />
+    <link href="css/styles.css" rel="stylesheet" />
+    <style>
+        .center-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin-top: 20px;
+        }
+
+        .divider-custom {
+            width: 100%;
+            max-width: 400px;
+            display: flex;
+            align-items: center;
+        }
+
+        .divider-custom-line {
+            flex-grow: 1;
+            height: 1px;
+            background-color: #d1d1d1;
+            margin: 5px 30;
+            /* 구분선 위아래 여백 추가 */
+        }
+
+        .divider-custom-icon {
+            margin: 0 1rem;
+        }
+
+        #reviewsOutput {
+            margin-top: 20px;
+            /* 리뷰 출력 영역과 폼 사이 여백 추가 */
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .center {
+            width: 600px;
+            height: 100vh;
+            /* 화면의 세로 중앙 정렬을 위해 추가 */
+            height: 400px;
+            /* 상자의 높이 조정 */
+            border: 2px solid #000;
+            /* 테두리 스타일과 색상 지정 */
+            border-radius: 8px  ;
+        }
+
+        .upload {
+            width: 600px;
+            
+            text-align: center;
+            padding-bottom: 50px;
+        }
+
+        .image {
+            width: 600px;
+            padding-top: 50px;
+            height: 400px;
+            text-align: center;
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="page-section bg-highlight text-black mb-0" id="HOME">
+        <div class="container center-content">
+            <h2 class="page-section-heading text-center text-uppercase text-black">Virtual Makeup</h2>
+            <div class="divider-custom divider-light">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                <div class="divider-custom-line"></div>
+            </div>
+        </div>
+    </section>
+    <br>
+    <div class="container">
+        <div class="center">
+            <h2 class="upload">Image Upload</h2>
+            <div class="image">
+                <form action="UploadImageServlet" method="post" enctype="multipart/form-data">
+                    <input type="file" name="image" accept="image/*"><br>
+                    <button type="button" onclick="redirectToVirtual2Page()">업로드</button>
+
+                </form>
+            </div>
+        </div>
+        <script>
+            function redirectToVirtual2Page() {
+                window.location.href = "Virtual%202page.html";
+            }
+        </script>
+    </div>
+
+    <footer style="text-align: center;">
+        <br>
+        <ul style="display: flex; justify-content: center; list-style: none; padding: 0;">
+            <li style="margin-right: 20px;">
+                <a href="Preview.html"
+                    style="text-decoration: none; padding: 10px 20px; background-color: #ffb6c1; color: #fff; border-radius: 5px;">이전</a>
+            </li>
+            <li style="margin-right: 20px;">
+                <a href="index.html"
+                    style="text-decoration: none; padding: 10px 20px; background-color: #ffb6c1; color: #fff; border-radius: 5px;">목록</a>
+            </li>
+            <li>
+                <a href="Virtual 2page.html"
+                    style="text-decoration: none; padding: 10px 20px; background-color: #ffb6c1; color: #fff; border-radius: 5px;">다음</a>
+            </li>
+        </ul>
+    </footer>
+</body>
+
+</html>

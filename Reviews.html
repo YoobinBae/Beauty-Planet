@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- 다섯번째 페이지 -->
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Reviews - Beauty Planet</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet"
+        type="text/css" />
+    <link href="css/styles.css" rel="stylesheet" />
+    <style>
+        /* 공통 스타일 정의 */
+        .center-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin-top: 20px;
+        }
+
+        .divider-custom {
+            width: 100%;
+            max-width: 400px;
+            display: flex;
+            align-items: center;
+        }
+
+        .divider-custom-line {
+            flex-grow: 1;
+            height: 1px;
+            background-color: #d1d1d1;
+            margin: 5px 30;
+            /* 구분선 위아래 여백 추가 */
+        }
+
+        .divider-custom-icon {
+            margin: 0 1rem;
+        }
+
+        #reviewsOutput {
+            margin-top: 20px;
+            /* 리뷰 출력 영역과 폼 사이 여백 추가 */
+        }
+
+        /* 별점 평가 스타일 */
+        .rating {
+            unicode-bidi: bidi-override;
+            direction: rtl;
+            text-align: left;
+            margin-top: 20px;
+        }
+
+        .rating input {
+            display: none;
+        }
+
+        .rating label {
+            display: inline-block;
+            font-size: 2rem;
+            /* 별 크기 */
+            color: #ccc;
+            /* 비활성화된 별 색상 */
+            cursor: pointer;
+        }
+
+        .rating label:before {
+            content: '\2605';
+            /* 별 모양 */
+        }
+
+        .rating input:checked~label {
+            color: #ffca08;
+            /* 활성화된 별 색상 */
+        }
+
+        .rating input:checked~label:before {
+            content: '\2605';
+            /* 활성화된 별 모양 */
+        }
+    </style>
+</head>
+
+
+<body>
+    <section class="page-section bg-highlight text-black mb-0" id="HOME">
+        <div class="container center-content">
+            <h2 class="page-section-heading text-center text-uppercase text-black">Reviews</h2>
+            <div class="divider-custom divider-light">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                <div class="divider-custom-line"></div>
+                <style>
+                    /* 폼 및 텍스트 가운데 정렬 */
+                    .text-center {
+                        text-align: center;
+                    }
+
+                    /* 리뷰 작성 라벨 및 입력 필드의 글씨 크기 조정 */
+                    .form-label,
+                    .form-control {
+                        font-size: 1rem;
+                        /* 글씨 크기를 키움 */
+                    }
+
+                    /* 리뷰 출력 영역의 글씨 크기 조정 */
+                    #reviewsOutput .mb-3 {
+                        font-size: 0.875rem;
+                        /* 글씨 크기를 키움 */
+                    }
+
+                    /* 버튼의 글씨 크기 조정 */
+                    .btn-xl {
+                        font-size: 1rem;
+                        /* 글씨 크기를 키움 */
+                    }
+                </style>
+            </div>
+        </div>
+    </section>
+
+    <!-- <div class="container mt-4"> -->
+    <!-- Reviews Section Heading-->
+    <!-- <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Reviews</h2> -->
+    <!-- Icon Divider-->
+    <!-- <div class="divider-custom">
+            <div class="divider-custom-line"></div>
+            <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+            <div class="divider-custom-line"></div>
+        </div> -->
+    <!-- Reviews content can be added here
+    </div> -->
+
+    <!-- 리뷰 작성하기 -->
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 col-xl-7">
+                <form id="ReviewsForm" data-sb-form-api-token="API_TOKEN" class="d-flex flex-column align-items-center">
+
+                    <div class="form-floating mb-3 text-center" style="width: 50%; margin: 0 auto;">
+                        <br>
+                        <label for="reviewInput" class="form-label">리뷰를 작성하세요</label>
+
+                        <!-- 간격 조절 -->
+                        <div style="margin-top: 20px;"></div>
+
+                        <input class="form-control" id="reviewInput" type="text" placeholder="리뷰를 작성해주세요."
+                            data-sb-validations="required" style="width: 100%;" />
+                    </div>
+
+                    <!-- 별점 평가 -->
+                    <div class="text-center mb-3" style="width: 50%; margin: 0 auto;">
+                        <fieldset class="rating">
+                            <legend>별점을 선택하세요</legend>
+                            <input type="radio" id="star5" name="rating" value="5" /><label for="star5"></label>
+                            <input type="radio" id="star4" name="rating" value="4" /><label for="star4"></label>
+                            <input type="radio" id="star3" name="rating" value="3" /><label for="star3"></label>
+                            <input type="radio" id="star2" name="rating" value="2" /><label for="star2"></label>
+                            <input type="radio" id="star1" name="rating" value="1" /><label for="star1"></label>
+                        </fieldset>
+                    </div>
+                    <!-- 간격 조절 -->
+                    <div style="margin-top: 20px;"></div>
+
+                    <!-- Submit Button-->
+                    <div class="text-center">
+                        <button class="btn btn-primary btn-xl" id="submitButton" type="submit">Send</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- 리뷰 출력 영역 -->
+    <div id="reviewsOutput" class="mt-4"></div>
+    </div>
+
+    <script>
+        // 폼이 제출될 때 리뷰를 화면에 출력하는 함수
+        function displayReview(event) {
+            event.preventDefault(); // 기본 동작(폼 제출)을 막음
+
+            const reviewInput = document.getElementById('reviewInput');
+            const reviewText = reviewInput.value.trim(); // 입력된 리뷰 내용
+
+            if (reviewText === '') {
+                alert('리뷰를 입력해주세요.'); // 빈 리뷰일 경우 알림을 표시하고 함수 종료
+                return;
+            }
+
+            // 리뷰를 출력할 영역을 가져옴
+            const reviewsOutput = document.getElementById('reviewsOutput');
+
+            // 새로운 리뷰를 생성하여 출력 영역에 추가
+            const newReviewElement = document.createElement('div');
+            newReviewElement.classList.add('mb-3');
+            newReviewElement.innerText = reviewText;
+            reviewsOutput.appendChild(newReviewElement);
+
+            // 입력 필드 비우기
+            reviewInput.value = '';
+        }
+
+        // 폼이 제출될 때 리뷰 출력 함수 호출
+        document.getElementById('ReviewsForm').addEventListener('submit', displayReview);
+    </script><br>
+
+    <footer style="text-align: center;">
+        <ul style="display: flex; justify-content: center; list-style: none; padding: 0;">
+            <li style="margin-right: 20px;">
+                <a href="Color Type Explanation.html"
+                    style="text-decoration: none; padding: 10px 20px; background-color: #ffb6c1; color: #fff; border-radius: 5px;">이전</a>
+            </li>
+            <li style="margin-right: 20px;">
+                <a href="index.html"
+                    style="text-decoration: none; padding: 10px 20px; background-color: #ffb6c1; color: #fff; border-radius: 5px;">목록</a>
+            </li>
+            <li>
+            <li style="display: inline-block;">
+                <a href="#" id="exitButton"
+                    style="text-decoration: none; padding: 10px 20px; background-color: #ffb6c1; color: #fff; border-radius: 5px;">종료</a>
+            </li>
+        </ul>
+
+
+        <script>
+            document.getElementById('exitButton').addEventListener('click', function () {
+                alert('감사합니다');
+            });
+        </script>
+        </ul>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,102 @@
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Virtual Makeup- Beauty Planet</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet"
+        type="text/css" />
+    <link href="css/styles.css" rel="stylesheet" />
+    <style>
+        .center-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin-top: 20px;
+        }
+
+        .divider-custom {
+            width: 100%;
+            max-width: 400px;
+            display: flex;
+            align-items: center;
+        }
+
+        .divider-custom-line {
+            flex-grow: 1;
+            height: 1px;
+            background-color: #d1d1d1;
+            margin: 5px 30;
+            /* 구분선 위아래 여백 추가 */
+        }
+
+        .image {
+            width: 600px;
+            text-align: center;
+            border: 2px solid #000;
+            height: 400px;
+            margin: auto;
+            border-radius: 8px;
+            padding-top: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="page-section bg-highlight text-black mb-0" id="HOME">
+        <div class="container center-content">
+            <h2 class="page-section-heading text-center text-uppercase text-black">Virtual Makeup Image</h2>
+            <div class="divider-custom divider-light">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                <div class="divider-custom-line"></div>
+            </div>
+        </div>
+    </section>
+
+    <br>
+    <div class="image">
+        <h2>업로드된 이미지</h2>
+        <div id="image-container"></div>
+    </div>
+
+    <script>
+        //쿼리 문자열 파싱하여 이미지 파일 경로 가져오기
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        const imagePath = urlParams.get('image');
+
+        // 이미지를 표시할 요소 가져오기
+        const imageContainer = document.getElementById('image-container');
+
+        // 이미지를 표시하기
+        const imageElement = document.createElement('img');
+        imageElement.src = imagePath;
+        imageContainer.appendChild(imageElement);
+    </script>
+
+    <footer style="text-align: center;">
+        <br>
+        <ul style="display: flex; justify-content: center; list-style: none; padding: 0;">
+            <li style="margin-right: 20px;">
+                <a href="Virtual Makeup.html"
+                    style="text-decoration: none; padding: 10px 20px; background-color: #ffb6c1; color: #fff; border-radius: 5px;">이전</a>
+            </li>
+            <li style="margin-right: 20px;">
+                <a href="index.html"
+                    style="text-decoration: none; padding: 10px 20px; background-color: #ffb6c1; color: #fff; border-radius: 5px;">목록</a>
+            </li>
+            <li>
+                <a href="Personal Color Diagnosis.html"
+                    style="text-decoration: none; padding: 10px 20px; background-color: #ffb6c1; color: #fff; border-radius: 5px;">다음</a>
+            </li>
+        </ul>
+    </footer>
+
+</body>
+
+</html>

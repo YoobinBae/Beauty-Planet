@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--웹 사이트 상단. 로고, 내비게이션 링크 포함-->
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Beauty Planet</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="javascript.js" defer></script>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet"
+        type="text/css" />
+
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div id="root"></div>
+</body>
+<nav>
+    <ul>
+        <li><a href="main.html">Main</a></li>
+        <li><a href="home.html">Home</a></li> <!-- 추가된 Home 버튼 -->
+    </ul>
+</nav>
+
+</html>
+
+<body id="page-top">
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg bg-beige text-uppercase fixed-top" id="mainNav">
+        <div class="container bg-highlight">
+            <a class="navbar-brand text-black mr-auto" ref="#page-top" style="margin-right: auto !important;">Beauty
+                Planet</a>
+            <style>
+                .navbar-brand {
+                    margin-right: auto;
+                    /* Beauty Planet 로고를 왼쪽 끝으로 이동 */
+                }
+
+                .bg-beige {
+                    background-color: #fff3cd;
+                }
+
+                .navbar-brand {
+                    color: black;
+                    /* 왼쪽 상단 글씨 검정색으로 변경 */
+                }
+            </style>
+            <button class="navbar-toggler text-uppercase font-weight-bold bg-white text-black rounded" type="button"
+                data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive"
+                aria-expanded="false" aria-label="Toggle navigation">
+                Menu
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto">
+                    <style>
+                        .navbar-nav .nav-link {
+                            color: black !important;
+                            /* 검정색으로 변경 */
+                        }
+
+                        .navbar-nav .nav-link.active {
+                            background-color: white;
+                            /* 클릭된 메뉴 항목의 배경색을 베이지로 변경 */
+                        }
+                    </style>
+
+                    <!--첫 페이지 상단바-->
+                    <!--메뉴를 눌렀을때 해당하는 페이지로 이동-->
+                    <li class="nav-item mx-0 mx-lg-1">
+                        <a class="nav-link py-3 px-0 px-lg-3 rounded" href="home.html">Home</a>
+                    </li>
+                    <li class="nav-item mx-0 mx-lg-1">
+                        <a class="nav-link py-3 px-0 px-lg-3 rounded" href="Virtual Makeup.html">Virtual Makeup</a>
+
+                    </li>
+                    <li class="nav-item mx-0 mx-lg-1">
+                        <a class="nav-link py-3 px-0 px-lg-3 rounded" href="Personal Color Diagnosis.html">Personal
+                            Color Diagnosis</a>
+                    </li>
+                    <li class="nav-item mx-0 mx-lg-1">
+                        <a class="nav-link py-3 px-0 px-lg-3 rounded" href="Color Type Explanation.html">Color Type
+                            Explanation</a>
+                    </li>
+                    <li class="nav-item mx-0 mx-lg-1">
+                        <a class="nav-link py-3 px-0 px-lg-3 rounded" href="Reviews.html">Reviews</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- 첫 페이지: 웹 사이트의 주요 콘텐츠를 강조하는 섹션. 주요 제목, 부제목 포함-->
+    <header class="masthead bg-highlight text-black text-center">
+        <div class="container d-flex align-items-center flex-column">
+            <!-- Masthead Avatar Image-->
+            <img class="masthead-avatar mb-5" src="F:\BeautyProject\logo.png" alt="..." />
+            <!-- 제목 Heading-->
+            <h1 class="masthead-heading text-uppercase mb-0">Beauty Planet</h1>
+            <style>
+                .btn-active {
+                    border: 2px solid black;
+                    /* 두께는 필요에 따라 조정하세요 */
+                }
+            </style>
+            <!-- 시작하기 Button -->
+            <a class="btn btn-white btn-lg mb-4" href="home.html" style="font-size: 24px;">시작하기</a>
+            <!-- Home 페이지로 이동 -->
+            <!-- 다음에 이용할게요 Button -->
+            <a class="btn btn-beige btn-sm mb-4" href="#" style="font-size: 14px;" id="thankYouBtn">다음에 이용할게요</a>
+
+            <script>
+                document.getElementById('thankYouBtn').addEventListener('click', function () {
+                    alert('감사합니다');
+                });
+            </script>
+
+        </div>
+    </header>
+    <script>
+        document.getElementById('startButton').addEventListener('click', function () {
+            this.classList.add('btn-active');
+        });
+
+        document.getElementById('laterButton').addEventListener('click', function () {
+            this.classList.add('btn-active');
+        });
+    </script>
+    <!--두번째 페이지(HOME) -->
+    <section class="page-section bg-highlight text-black mb-0" id="HOME">
+        <div class="container">
+            <h2 class="page-section-heading text-center text-uppercase text-black">HOME</h2>
+            <!-- Icon Divider-->
+            <div class="divider-custom divider-light">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                <div class="divider-custom-line"></div>
+            </div>
+            <!-- HOME Section Content-->
+
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>Beauty Planet</title>
+                <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+                <style>
+                    .lead {
+                        font-size: 30px;
+                    }
+
+                    .center-text {
+                        text-align: center;
+                        width: 100%;
+                    }
+
+                    .centered-content {
+                        margin: 0 auto;
+                        max-width: 800px;
+                    }
+
+                    ul {
+                        list-style: none;
+                        padding: 0;
+                        text-align: center;
+                    }
+
+                    ul li {
+                        margin: 10px 0;
+                    }
+
+                    a {
+                        font-size: 1.2em;
+                        text-decoration: none;
+                    }
+                </style>
+            </head>
+
+            <body>
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8 centered-content">
+                            <p class="lead" style="font-weight: bold;">Beauty Planet에 오신 것을 환영합니다!</p>
+
+                            <p>Beauty Planet은 혁신적인 가상 메이크업과 퍼스널컬러 진단 서비스를 제공하는 온라인 플랫폼입니다. 저희 웹사이트에서 제공하는 다양한 기능을 통해
+                                자신에게 가장 잘 어울리는 스타일과 색상을 손쉽게 발견하세요.</p>
+
+                            <br>
+                            <h2 class="lead" style="font-weight: bold;">왜 Beauty Planet인가요?</h2>
+                            <li class="lead" style="font-size: 15px;">맞춤형 솔루션: 개개인의 피부톤과 스타일에 맞춘 맞춤형 메이크업과 컬러
+                                추천.</li>
+                            <li class="lead" style="font-size: 15px;">최신 기술 적용: 최첨단 AI 기술을 활용하여 정확하고 빠른 진단과 시뮬레이션.</li>
+                            <li class="lead" style="font-size: 15px;">편리한 사용성: 간편한 인터페이스와 사용자 친화적인 디자인으로 누구나 쉽게 이용 가능.
+                            </li>
+
+                            <br>
+                            <br>
+                            <h2 class="lead" style="font-weight: bold;">주요 기능</h2>
+                            <h3 class="lead" style="font-size: 20px;">가상 메이크업(Virtual Makeup)</h3>
+                            <h3 class="lead" style="font-size: 20px;">퍼스널컬러 진단(Personal Color Diagnosis)</h3>
+
+                            <br>
+                            <br>
+                            <p class="center-text" style="font-weight: bold; font-size: 18px;">Beauty Planet에서
+                                당신만의 아름다움을 발견하세요.<br> 혁신적인 가상 메이크업과 퍼스널컬러 진단을 통해 더 자신감
+                                넘치는 자신을 만나보세요.</p>
+
+                        </div>
+                    </div>
+            </body>
+        </div>
+    </section>
+
+    <!-- 세번째 페이지 -->
+    <section class="page-section portfolio" id="portfolio">
+        <div class="container">
+            <!-- Portfolio Section Heading-->
+            <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Beauty Planet</h2>
+            <!-- Icon Divider-->
+            <div class="divider-custom">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                <div class="divider-custom-line"></div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <!-- Portfolio Item 1-->
+                    <div class="col-md-6 mb-5">
+                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal1">
+                            <div
+                                class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                <div class="portfolio-item-caption-content text-center text-white"><i
+                                        class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <img class="img-fluid" src="F:\BeautyProject\가상메이크업체험.png" alt="..." />
+                        </div>
+                    </div>
+                    <!--Portfolio Item 2-->
+                    <div class="col-md-6 mb-5">
+                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal2">
+                            <div
+                                class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                <div class="portfolio-item-caption-content text-center text-white"><i
+                                        class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <img class="img-fluid" src="F:\BeautyProject\퍼스널컬러 진단.png" alt="..." />
+                        </div>
+                    </div>
+                    <!-- Portfolio Item 3-->
+                    <div class="col-md-6 mb-5">
+                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal3">
+                            <div
+                                class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                <div class="portfolio-item-caption-content text-center text-white"><i
+                                        class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <img class="img-fluid" src="F:\BeautyProject\퍼스널컬러 사진.png" alt="..." />
+                        </div>
+                    </div>
+                    <!-- Portfolio Item 4-->
+                    <div class="col-md-6 mb-5">
+                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal4">
+                            <div
+                                class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                <div class="portfolio-item-caption-content text-center text-white"><i
+                                        class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <img class="img-fluid" src="F:\BeautyProject\리뷰.png" alt="..." />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <section class="page-section" id="reviews">
+            <div class="container">
+                <!-- Reviews Section Heading-->
+                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">REVIEWS</h2>
+                <!-- Icon Divider-->
+                <div class="divider-custom">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                    <div class="divider-custom-line"></div>
+                </div>
+                <!-- Reviews Section Form-->
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 col-xl-7">
+                        <!-- * * * * * * * * * * * * * * *-->
+                        <!-- * * SB Forms Contact Form * *-->
+                        <!-- * * * * * * * * * * * * * * *-->
+                        <!-- This form is pre-integrated with SB Forms.-->
+                        <!-- To make this form functional, sign up at-->
+                        <!-- https://startbootstrap.com/solution/contact-forms-->
+                        <!-- to get an API token!-->
+                        <form id="ReviewsForm" data-sb-form-api-token="API_TOKEN">
+                            <!-- first Reviews input-->
+                            <div class="form-floating mb-3">
+                                <input class="form-control" id="first" type="text" placeholder="리뷰를 작성해주세요."
+                                    data-sb-validations="required" />
+                                <label for="name">리뷰 작성하기</label>
+                                <div class="invalid-feedback" data-sb-feedback="Reviews:required">A name is required.
+                                </div>
+                            </div>
+                            <!-- 추가된 부분 -->
+                            <button id="sortReviewsBtn" class="btn btn-primary" type="button">별점 높은 순</button><br><br>
+                            <button id="sortReviewsBtn" class="btn btn-primary" type="button">최신순</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <script>
+            // 별점 높은 순으로 리뷰를 정렬하는 함수
+            function sortReviewsByRating() {
+                // 리뷰들을 가져옴
+                const reviews = document.querySelectorAll('.review');
+
+                // 가져온 리뷰들을 배열로 변환하여 정렬
+                const reviewsArray = Array.from(reviews);
+                const sortedReviews = reviewsArray.sort((a, b) => {
+                    // 리뷰의 별점 데이터를 비교하여 정렬
+                    const ratingA = parseInt(a.dataset.rating);
+                    const ratingB = parseInt(b.dataset.rating);
+                    return ratingB - ratingA;
+                });
+
+                // 정렬된 리뷰들을 순서대로 삽입
+                const reviewsContainer = document.querySelector('#reviews .container');
+                reviewsContainer.innerHTML = ''; // 기존 리뷰들을 모두 지움
+                sortedReviews.forEach(review => {
+                    reviewsContainer.appendChild(review);
+                });
+            }
+
+            // 폼이 제출될 때 정렬 함수 호출
+            document.getElementById('ReviewsForm').addEventListener('submit', function (event) {
+                event.preventDefault(); // 기본 동작(폼 제출)을 막음
+                sortReviewsByRating(); // 리뷰를 별점 높은 순으로 정렬
+            });
+        </script>
+        <script>
+            // 최신순으로 리뷰를 정렬하는 함수
+            function sortReviewsByDate() {
+                // 리뷰들을 가져옴
+                const reviews = document.querySelectorAll('.review');
+
+                // 가져온 리뷰들을 배열로 변환하여 정렬
+                const reviewsArray = Array.from(reviews);
+                const sortedReviews = reviewsArray.sort((a, b) => {
+                    // 리뷰의 작성일 데이터를 비교하여 정렬
+                    const dateA = new Date(a.dataset.date);
+                    const dateB = new Date(b.dataset.date);
+                    return dateB - dateA;
+                });
+
+                // 정렬된 리뷰들을 순서대로 삽입
+                const reviewsContainer = document.querySelector('#reviews .container');
+                reviewsContainer.innerHTML = ''; // 기존 리뷰들을 모두 지움
+                sortedReviews.forEach(review => {
+                    reviewsContainer.appendChild(review);
+                });
+            }
+
+            // 폼이 제출될 때 정렬 함수 호출
+            document.getElementById('ReviewsForm').addEventListener('submit', function (event) {
+                event.preventDefault(); // 기본 동작(폼 제출)을 막음
+                sortReviewsByDate(); // 리뷰를 최신순으로 정렬
+            });
+        </script>
+
+
+        <!-- Footer: 웹 사이트 하단. 위치 정보, 소셜 미디어 링크 및 관련 사이트 정보-->
+        <footer class="footer text-center">
+            <div class="container">
+                <div class="row">
+                    <!-- Footer Location-->
+                    <style>
+                        .center {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            margin-top: auto;
+                            margin-bottom: auto;
+                        }
+
+                        /* "소프트웨어&서비스 컴퓨팅 전공"이 한 줄에 나오도록 설정 */
+                        .container h4 {
+                            white-space: nowrap;
+                        }
+                    </style>
+                    <div class="container center">
+                        <div class="col-lg-4 mb-5 mb-lg-0">
+                            <h4 class="text-uppercase mb-4">컴퓨터응용수학부<br> 소프트웨어&서비스 컴퓨팅 전공</h4>
+                            <p class="lead mb-0">
+                            <ul>
+                                <li>2020500064 이수연</li>
+                                <li>2020700101 배유빈</li>
+                                <li>2020810075 최지연</li>
+                            </ul>
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Footer Social Icons-->
+                    <!-- <div class="col-lg-4 mb-5 mb-lg-0">
+                        <h4 class="text-uppercase mb-4">Around the Web</h4>
+                        <a class="btn btn-outline-light btn-social mx-1" href="#!"><i
+                                class="fab fa-fw fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light btn-social mx-1" href="#!"><i
+                                class="fab fa-fw fa-twitter"></i></a>
+                        <a class="btn btn-outline-light btn-social mx-1" href="#!"><i
+                                class="fab fa-fw fa-linkedin-in"></i></a>
+                        <a class="btn btn-outline-light btn-social mx-1" href="#!"><i
+                                class="fab fa-fw fa-dribbble"></i></a>
+                    </div> -->
+                    <!-- Footer About Text-->
+                    <!-- <div class="col-lg-4">
+                        <h4 class="text-uppercase mb-4">About Freelancer</h4>
+                        <p class="lead mb-0">
+                            Freelance is a free to use, MIT licensed Bootstrap theme created by
+                            <a href="http://startbootstrap.com">Start Bootstrap</a>
+                            .
+                        </p>
+                    </div> -->
+                </div>
+            </div>
+        </footer>
+        <!-- Copyright Section-->
+        <div class="copyright py-4 text-center text-white">
+            <div class="container"><small>HKNU</small></div>
+        </div>
+        <!-- Portfolio Modals-->
+        <!-- 가상메이크업 체험 -->
+        <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" aria-labelledby="portfolioModal1"
+            aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal"
+                            aria-label="Close"></button></div>
+                    <div class="modal-body text-center pb-5">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8">
+                                    <!-- Portfolio Modal - Title-->
+                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">가상메이크업 체험<br>
+                                    </h2>
+                                    <h2>(Virtual Makeup)</h2>
+                                    <!-- Icon Divider-->
+                                    <div class="divider-custom">
+                                        <div class="divider-custom-line"></div>
+                                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                                        <div class="divider-custom-line"></div>
+                                    </div>
+                                    <!-- Portfolio Modal - Image-->
+                                    <img class="img-fluid rounded mb-5" src="F:\BeautyProject\가상메이크업체험.png"
+                                        alt="..." />
+                                    <!-- Portfolio Modal - Text-->
+                                    <p class="mb-4">
+                                    <ul>
+                                        <li>다양한 메이크업 제품을 가상으로 시도해보세요.</li>
+                                        <li>당신의 사진을 업로드하고, 다양한 색조와 스타일을 실시간으로 적용해 볼 수 있습니다.</li>
+                                        <li>새로운 메이크업 룩을 시도하고, 당신에게 어울리는 제품을 추천받으세요.</li>
+                                    </ul>
+                                    </p>
+                                    <button class="btn btn-primary" onclick="window.location.href = '다음페이지URL';">
+                                        <i class="fas fa-arrow-right fa-fw"></i>
+                                        다음 페이지
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 퍼스널 컬러 진단 -->
+        <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" aria-labelledby="portfolioModal2"
+            aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal"
+                            aria-label="Close"></button></div>
+                    <div class="modal-body text-center pb-5">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8">
+                                    <!-- Portfolio Modal - Title-->
+                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">퍼스널 컬러 진단<br>
+                                    </h2>
+                                    <h2>(Personal Color Diagnosis)</h2>
+                                    <!-- Icon Divider-->
+                                    <div class="divider-custom">
+                                        <div class="divider-custom-line"></div>
+                                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                                        <div class="divider-custom-line"></div>
+                                    </div>
+                                    <!-- Portfolio Modal - Image-->
+                                    <img class="img-fluid rounded mb-5" src="F:\BeautyProject\퍼스널컬러 진단.png"
+                                        alt="..." />
+                                    <!-- Portfolio Modal - Text-->
+                                    <p class="mb-4">
+                                    <ul>
+                                        <li>전문적인 퍼스널컬러 진단을 통해 당신의 피부톤에 가장 잘 어울리는 색상을 찾아보세요.</li>
+                                        <li>간단한 질문에 답변하고, AI 기술을 활용한 정밀한 진단 결과를 받아보세요.</li>
+                                        <li>각 퍼스널컬러 타입에 맞는 스타일링 팁과 추천 색상 팔레트를 제공합니다.</li>
+                                    </ul>
+
+                                    </p>
+                                    <button class="btn btn-primary" onclick="window.location.href = '다음페이지URL';">
+                                        <i class="fas fa-arrow-right fa-fw"></i>
+                                        다음 페이지
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 퍼스널컬러 알아보기 -->
+        <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" aria-labelledby="portfolioModal3"
+            aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal"
+                            aria-label="Close"></button></div>
+                    <div class="modal-body text-center pb-5">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8">
+                                    <!-- Portfolio Modal - Title-->
+                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">퍼스널컬러 알아보기</h2>
+                                    <!-- Icon Divider-->
+                                    <div class="divider-custom">
+                                        <div class="divider-custom-line"></div>
+                                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                                        <div class="divider-custom-line"></div>
+                                    </div>
+                                    <!-- Portfolio Modal - Image-->
+                                    <img class="img-fluid rounded mb-5" src="F:\BeautyProject\퍼스널컬러 사진.png"
+                                        alt="..." />
+                                    <!-- Portfolio Modal - Text-->
+                                    <p class="mb-4">퍼스널컬러에 대해 자세히 알아보기
+                                    </p>
+                                    <button class="btn btn-primary" onclick="window.location.href = '다음페이지URL';">
+                                        <i class="fas fa-arrow-right fa-fw"></i>
+                                        다음 페이지
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 리뷰페이지 -->
+        <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" aria-labelledby="portfolioModal4"
+            aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal"
+                            aria-label="Close"></button></div>
+                    <div class="modal-body text-center pb-5">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8">
+                                    <!-- Portfolio Modal - Title-->
+                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">리뷰 작성하기</h2>
+                                    <!-- Icon Divider-->
+                                    <div class="divider-custom">
+                                        <div class="divider-custom-line"></div>
+                                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                                        <div class="divider-custom-line"></div>
+                                    </div>
+                                    <!-- Portfolio Modal - Image-->
+                                    <img class="img-fluid rounded mb-5" src="F:\BeautyProject\리뷰.png"
+                                        alt="..." />
+                                    <!-- Portfolio Modal - Text-->
+                                    <p class="mb-4">리뷰 작성하기
+                                    </p>
+                                    <button class="btn btn-primary" onclick="window.location.href = '다음페이지URL';">
+                                        <i class="fas fa-arrow-right fa-fw"></i>
+                                        다음 페이지
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Portfolio Modal 5-->
+        <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" aria-labelledby="portfolioModal5"
+            aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal"
+                            aria-label="Close"></button></div>
+                    <div class="modal-body text-center pb-5">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8">
+                                    <!-- Portfolio Modal - Title-->
+                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Locked Safe
+                                    </h2>
+                                    <!-- Icon Divider-->
+                                    <div class="divider-custom">
+                                        <div class="divider-custom-line"></div>
+                                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                                        <div class="divider-custom-line"></div>
+                                    </div>
+                                    <!-- Portfolio Modal - Image-->
+                                    <img class="img-fluid rounded mb-5" src="assets/img/portfolio/safe.png" alt="..." />
+                                    <!-- Portfolio Modal - Text-->
+                                    <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia
+                                        neque
+                                        assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam
+                                        velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque.
+                                        Nam.
+                                    </p>
+                                    <button class="btn btn-primary" data-bs-dismiss="modal">
+                                        <i class="fas fa-xmark fa-fw"></i>
+                                        Close Window
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Portfolio Modal 6-->
+        <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" aria-labelledby="portfolioModal6"
+            aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal"
+                            aria-label="Close"></button></div>
+                    <div class="modal-body text-center pb-5">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8">
+                                    <!-- Portfolio Modal - Title-->
+                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Submarine</h2>
+                                    <!-- Icon Divider-->
+                                    <div class="divider-custom">
+                                        <div class="divider-custom-line"></div>
+                                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                                        <div class="divider-custom-line"></div>
+                                    </div>
+                                    <!-- Portfolio Modal - Image-->
+                                    <img class="img-fluid rounded mb-5" src="assets/img/portfolio/submarine.png"
+                                        alt="..." />
+                                    <!-- Portfolio Modal - Text-->
+                                    <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia
+                                        neque
+                                        assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam
+                                        velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque.
+                                        Nam.
+                                    </p>
+                                    <button class="btn btn-primary" data-bs-dismiss="modal">
+                                        <i class="fas fa-xmark fa-fw"></i>
+                                        Close Window
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <!-- * *                               SB Forms JS                               * *-->
+        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+</body>
+
+</html>
